@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.main-menu, .game-container {
+    background-color: #3a3f47;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.main-menu h1 {
+    color: #61dafb;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.settings {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.settings-panel {
+    display: none;
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    right: 0;
+    background-color: #4a4f57;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    text-align: left;
+    min-width: 150px;
+}
+
+.settings-panel label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.settings-panel input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.game-board {
+    display: grid;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+/* Dynamic grid sizing handled by JavaScript */
+.cell {
+    width: 80px; /* Default cell size */
+    height: 80px;
+    background-color: #4a4f57;
+    border: 2px solid #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    background-color: #5a6069;
+}
+
+.cell.X {
+    color: #ff6347; /* Tomato */
+}
+
+.cell.O {
+    color: #4CAF50; /* Green */
+}
+
+.message-area {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #61dafb;
+}
+
+/* Popups */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background-color: #3a3f47;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.popup-content h2 {
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
